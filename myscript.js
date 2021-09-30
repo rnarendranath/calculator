@@ -186,3 +186,45 @@ function cgpa()
     }
 }
         
+function gpm()
+{
+    var f=document.getElementById ('mark1').value;
+    var g=document.getElementById('mark2').value;
+    var h=document.getElementById('mark3').value;
+    var i=document.getElementById ('mark4').value;
+    var j=document.getElementById('mark5').value;
+    var k=document.getElementById('mark6').value;
+
+    var f1 = document.getElementById('cred1').value;
+    var g1=document.getElementById('cred2').value;
+    var h1=document.getElementById('cred3').value;
+    var i1=document.getElementById ('cred4').value;
+    var j1=document.getElementById('cred5').value;
+    var k1=document.getElementById('cred6').value;
+
+   var sum1 = f*f1 ;
+    
+    
+    var sum2 = g*g1 ;
+    
+    
+    var sum3 = h*h1 ;
+    
+   
+    var sum4 = i*i1 ;
+    
+    
+    var sum5 = j*j1 ;
+    
+    
+    var sum6 = k*k1 ;
+    
+    var allcred = parseFloat(f1) + parseFloat(g1) + parseFloat(h1) + parseFloat(i1) + parseFloat(j1) + parseFloat(k1) ;
+
+    var allsum = sum1 + sum2 + sum3 + sum4 + sum5 + sum6;
+
+    var allavg = (allsum/allcred).toFixed(2);
+
+    document.gp.summ.value = allavg ;
+
+}
