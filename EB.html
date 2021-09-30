@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<head>
+<title>EB bill calculator</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<body style="background-color: rgb(240, 218, 221);">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" href="#">Calculator</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="cgpa.html">CGPA Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="EB.html">EB calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="simplecalculaotr.html">Simple calculator</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav><br><br><br><br><br>
+    <center>
+      <form method="post"  style="background-color: rgb(208, 224, 163);width: 60%;height: 350px;">
+        <Fieldset style="width: 50%;">
+          <br><br>
+            <legend style="display: center;color:rgb(241, 58, 58)"> <b> ELECTRIC BILL CALCULATION </b></legend>
+            <br>
+      <table>
+       <tr>
+         <th><label for="tariff" class="text-primary">TARIFF :</label>  </th>
+         <th><select name="tariff" id="tariff" style="width: 180px;">
+                   <option value="None">Select a traiff</option>
+                   <option value="Commercial">Commercial</option>
+                   <option value="Domestic">Domestic</option>
+                   
+            </select></th>
+            
+       </tr>
+      
+       <tr>
+         <th><label for="unit1" class="text-primary" > NO.OF UNITS : </label></th>
+         <th><input type="number" name="unit1" id="unit1"> </th>
+      
+        </tr>
+    
+        
+     
+       <tr>
+         <br>
+        <th  style="text-align: center;" colspan="2"><input type="button" style='color:rgb(255, 255, 255);
+        width:120px;background-color:rgb(17, 0, 255);' id="btu" value=" CALCULATE " onclick="eleValue()"></th>
+         
+        </tr>
+     
+       
+       
+       <tr>
+         <th style="color:rgb(0, 81, 255) ;">Electric Bill : </th>
+         <th style="text-align: center;"><p id="demo" style="background-color: whitesmoke;"></p></th>
+        </tr>
+        <tr>
+          <th style="color: rgb(208, 224, 163);"> </th>
+          <th style="text-align: center;"><p style="background-color:rgb(208, 224, 163); color : rgb(208, 224, 163); height:20px" id="con" style="display: none;" DISABLED></p></th>
+         
+         </tr>
+         <tr>
+          <th style="color: rgb(208, 224, 163);" width="500px;"><label for="load" > </label></th>
+          <th><input type="number" name="load" id="load" style="background-color: rgb(208, 224, 163); border: none;" disabled> </th>
+         
+         </tr>
+       </table>
+     </form>
+    </Fieldset>
+    </center>
+     <script LANGUAGE="JavaScript">
+       function eleValue()
+       {
+         document.getElementById("con").innerHTML = "";
+         document.getElementById("demo").innerHTML = "";
+         var unit=document.getElementById('unit1').value;
+         var c=document.getElementById('tariff').value;
+         
+         if(c == "Domestic")
+         {
+            
+             if (unit>0 && unit<=100)
+                     {
+                   var x0 = 0.0;
+                   document.getElementById("con").innerHTML = ""+unit;
+                   document.getElementById("demo").innerHTML = ""+x0;
+                      }
+                    if (unit>=101 && unit<=200)
+                    {
+                  var x3 = unit;
+                          var x1 =  (unit-100)*1.5;
+                  var x12=x1+250;
+                  var x6 = 50;
+                  var x7 = x12-x6;
+                          var x4 = 30;			
+                  var x8 = 10;
+                          var x2 = 250;
+                          var x0 = Math.ceil(x1+x4-x8);
+                  var x11=Math.abs(x0);
+                  document.getElementById("con").innerHTML = ""+unit;
+                  document.getElementById("demo").innerHTML = ""+x11;
+                     }
+                                              
+                  if (unit>=201 && unit<=500)
+                  {
+                  var x3 = unit;
+                          var x1 = (unit-200)*3 + 500;
+                  var x6 = 50;
+                  var x7 = x1-x6;
+                          var x4 = 30;			
+                  var x8 = 0;
+                          var x2 = 250 ;
+                          var x0 = Math.ceil(x1+x4-x2-x6-x8);
+                  document.getElementById("con").innerHTML = ""+unit;
+                  document.getElementById("demo").innerHTML = ""+x0;
+                  }
+                                                  
+                  if (unit>500)
+                  {
+                          var x3 = unit;
+                          var x1 = (unit-500)*6.6+1730+250;
+                  var x6 = 0;
+                  var x7 = x1-x6;
+                          var x4 = 50;			
+                  var x8 = 0;
+                          var x2 = 250 ;
+                          var x0 = Math.ceil(x1+x4-x2-x6-x8);
+                  document.getElementById("con").innerHTML = ""+unit;
+                  document.getElementById("demo").innerHTML = ""+x0;
+                   } 
+        }
+         else if(c == "Commercial")
+         {
+           var load = document.getElementById('load').value;
+            if (unit>0 && unit<=100)
+                    {
+                  var x3 = unit;
+                          var x1 = unit*5;
+                  var x6 = 0;
+                  var x7 = x1-x6;
+                          var x4 = load*140;			
+                  var x8 = 0;
+                          var x2 = (x1*0.05);
+                          var x0 =Math.ceil(x1+x4+x2);
+                  document.getElementById("con").innerHTML = ""+unit;
+                  document.getElementById("demo").innerHTML = ""+x0;	
+                    }
+                    if (unit>=101)
+                    {
+                var x3 = unit;
+                var x5 = unit*0.1;
+                        var x1 = unit*8.05;
+                var x6 = 0;
+                var x7 = x1-x6;
+                        var x4 = load*140;			
+                var x8 = 0;
+                        var x2 = (x1*0.05);
+                        var x0 = Math.ceil(x1+x4+x2);
+                document.getElementById("con").innerHTML = ""+unit;
+                document.getElementById("demo").innerHTML = ""+x0;
+                    }
+         }
+      }
+     </script>
+     <br><br><br><br><br><br>
+     <center>
+    <footer>
+      <div class="container-fluid" id="foot">
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px; margin-top: 20px;">
+            <p>&#169; reserved by Narendranath 19ITR052 </p>
+            
+          </div>
+        </div>
+      </div>
+    </footer>  
+  </center>
+</body>
+</html>

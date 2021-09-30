@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<head>
+<title> calculator</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="myscript.js"></script>
+
+</head>
+<body>
+    
+<body style="background-color: rgb(240, 218, 221);">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" href="#">Calculator</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="cgpa.html">CGPA Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="EB.html">EB calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="simplecalculaotr.html">Simple calculator</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav><br><br>
+  <center>
+    <form name="gpa">
+      <h1 class="text-danger">GPA calculator</h1>
+      <br>
+      <table style="margin-left: 100px;">
+     
+        <tr>
+          <th style="text-align: center;">Subject</th>
+          <th style="text-align: center;">Grade points</th>
+          <th style="text-align: center;">Credit</th>
+        </tr>
+        <tr>
+          <td>Subject1 : </td>
+          <td style="text-align: center;"><select name="mark1" id="mark1">
+            <option  value="10">O</option>
+            <option  value="9">A+</option>
+            <option  value="8">A</option>
+            <option  value="7">B+</option>
+            <option  value="6">B</option>
+            
+          </select></td>
+          <td><input type="number" id="cred1" name="cred1" min="1" max="4" style="margin-left:10.5%"></td>
+        </tr>
+        <tr>
+          <td>Subject2 : </td>
+          <td style="text-align: center;"><select name="mark2" max="4" id="mark2" >
+            <option  value="10">O</option>
+            <option  value="9">A+</option>
+            <option  value="8">A</option>
+            <option  value="7">B+</option>
+            <option  value="6">B</option>
+            
+          </select></td>
+          <td><input type="number" id="cred2" name="cred2" min="1" max="4" style="margin-left:10.5%"></td>
+        </tr>
+        <tr>
+          <td>Subject3 : </td>
+          <td style="text-align: center;"><select name="mark3" id="mark3">
+            <option  value="10">O</option>
+            <option  value="9">A+</option>
+            <option  value="8">A</option>
+            <option  value="7">B+</option>
+            <option  value="6">B</option>
+            
+          </select></td>
+          <td><input type="number" id="cred3" name="cred3" min="1" max="4" style="margin-left:10.5%"></td>
+        </tr>
+        <tr>
+          <td>Subject4 : </td>
+          <td style="text-align: center;"><select name="mark4" id="mark4">
+            <option  value="10">O</option>
+            <option  value="9">A+</option>
+            <option  value="8">A</option>
+            <option  value="7">B+</option>
+            <option  value="6">B</option>
+            
+          </select></td>
+          <td><input type="number" id="cred4" name="cred4" min="1" max="4" style="margin-left:10.5%"></td>
+        </tr>
+        <tr>
+          <td>Subject5 : </td>
+          <td style="text-align: center;"><select name="mark5" id="mark5">
+            <option  value="10">O</option>
+            <option  value="9">A+</option>
+            <option  value="8">A</option>
+            <option  value="7">B+</option>
+            <option  value="6">B</option>
+            
+          </select></td>
+          <td><input type="number" id="cred5" name="cred5" min="1" max="4" style="margin-left:10.5%"></td>
+        </tr>
+        <tr>
+          <td>Subject6 : </td>
+          <td style="text-align: center;"><select name="mark6" id="mark6">
+            <option  value="10">O</option>
+            <option  value="9">A+</option>
+            <option  value="8">A</option>
+            <option  value="7">B+</option>
+            <option  value="6">B</option>
+            
+          </select></td>
+          <td><input type="number" id="cred6" name="cred6" min="1" max="4" style="margin-left:10.5%"></td>
+        </tr>
+        <tr>
+          <td><br></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="button" class="btn btn-lg btn-success" name="sumbutton" value="Calculate" onclick="gpm()" id="sumbutton" style="margin-left:36.5%"></td>
+          <td><input class="btn btn-lg btn-success" type="reset" value="Reset" style="margin-left:5.5%"/></td>
+          
+        </tr>
+        <tr>
+          <td><br></td>
+        </tr>
+       <tr>
+         <td>GPA :</td>
+         <td><input style="font-size: 20px;" type="text" class="text-danger"  placeholder="GPA" name="summ" id="summ" width="100px" readonly></td>
+       </tr>
+      </table>
+    </form>
+
+    
+  </center> 
+  <div style="margin-top: 8px;" class="container-fluid">
+    <h1 style="text-align: center;" class="text-danger">CGPA calculator</h1>
+         
+    
+             
+              <form>
+                <center>
+        <div class="row">
+          <div class="col-md-12">
+            <table style="width: 100%;">
+              <h2 class="text-center">Choose how many semesters:</h2>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+              
+              <td>
+                <label style="border-radius: 10px;" for="textenableradio1">one</label>
+                    <input type="radio" class="form-check-input" id="textenableradio1" name="semester" value="one" onclick="boxenable1()" >
+              </td>
+              <td>
+                <label for="textenableradio2">Two</label>
+                    <input type="radio" class="form-check-input" id="textenableradio2" name="semester" value="two" onclick="boxenable2()" >
+              </td>
+              <td>
+                <label for="textenableradio3">Three</label>
+                <input type="radio" class="form-check-input" id="textenableradio3" name="semester" value="three" onclick="boxenable3()" >
+              </td>
+              <td>
+                <label for="textenableradio4">four</label>
+                <input type="radio" class="form-check-input" id="textenableradio4" name="semester" value="three" onclick="boxenable4()" >
+              </td>
+              <td>
+                <label for="textenableradio5">five</label>
+                <input type="radio" class="form-check-input" id="textenableradio5" name="semester" value="three" onclick="boxenable5()" >
+              </td>
+              <td>
+                <label for="textenableradio6">six</label>
+                                    <input type="radio" class="form-check-input" id="textenableradio6" name="semester" value="three" onclick="boxenable6()" >
+              </td>
+              <td>
+                <label for="textenableradio7">Seven</label>
+                                        <input type="radio" class="form-check-input" id="textenableradio7" name="semester" value="three" onclick="boxenable7()" >
+              </td>
+              <td>
+                <label for="textenableradio8">Eight</label>
+                                        <input type="radio" class="form-check-input" id="textenableradio8" name="semester" value="three" onclick="boxenable8()" >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+     
+      <h3 style="margin-top: 10px;">Enter GPA here :</h3>
+      
+      <div class="row">  
+        <div class="col-md-12"> 
+     
+       <div class="entmark " style="width: 600px;">
+     <span>
+      <input type="text" class="form-control" id="s1" placeholder="sem1" style="display:none; width:100px;" >
+      <input type="text" class="form-control" id="s2" placeholder="sem2" style="display:none; width:100px;">
+      <input type="text" class="form-control" id="s3" placeholder="sem3" style="display:none; width:100px;" >
+      <input type="text" class="form-control" id="s4" placeholder="sem4" style="display:none; width:100px;">
+      <input type="text" class="form-control" id="s5" placeholder="sem5" style="display:none; width:100px;">
+      <input type="text" class="form-control" id="s6" placeholder="sem6" style="display:none; width:100px;">
+      <input type="text" class="form-control" id="s7" placeholder="sem7" style="display:none; width:100px;">
+      <input type="text" class="form-control" id="s8" placeholder="sem8" style="display:none; width:100px;">
+    </span>
+      </div>
+      <br>
+      <input style type="button" class="btn btn-lg btn-success" value="Calculate" onclick="cgpa()">
+      <input class="btn btn-lg btn-success" type="reset" value="Reset" > <br><br>
+      <table> 
+        <tr>
+        <td>CGPA :</td>
+        <td><input style="font-size: 20px;" type="text" class="form-control text-danger" id="answer" placeholder="CGPA" width="100px">
+        </td>
+      </tr>
+     </table>
+    </center>
+      </form>
+      
+      </div>
+    
+</div>
+  </div>
+  <center>
+  <footer>
+    <div class="container-fluid" id="foot">
+      <div class="row">
+        <div class="col-md-12" style="margin-bottom: 20px; margin-top: 20px;">
+          <p>&#169; reserved by Narendranath 19ITR052 </p>
+          
+        </div>
+      </div>
+    </div>
+  </footer> 
+</center>
+</body>
+</html>
