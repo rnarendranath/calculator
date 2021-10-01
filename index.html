@@ -6,8 +6,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/bb9893fd41.js" crossorigin="anonymous"></script>
 <script src="myscript.js"></script>
-
+<style>
+td
+  {
+     padding: 5px;
+  }</style>
 </head>
 <body>
     
@@ -33,109 +38,116 @@
     </div>
   </nav><br><br>
   <center>
-    <form name="gpa">
-      <h1 class="text-danger">GPA calculator</h1>
-      <br>
-      <table style="margin-left: 100px;">
+   
      
-        <tr>
-          <th style="text-align: center;">Subject</th>
-          <th style="text-align: center;">Grade points</th>
-          <th style="text-align: center;">Credit</th>
-        </tr>
-        <tr>
-          <td>Subject1 : </td>
-          <td style="text-align: center;"><select name="mark1" id="mark1">
-            <option  value="10">O</option>
-            <option  value="9">A+</option>
-            <option  value="8">A</option>
-            <option  value="7">B+</option>
-            <option  value="6">B</option>
-            
-          </select></td>
-          <td><input type="number" id="cred1" name="cred1" min="1" max="4" style="margin-left:10.5%"></td>
-        </tr>
-        <tr>
-          <td>Subject2 : </td>
-          <td style="text-align: center;"><select name="mark2" max="4" id="mark2" >
-            <option  value="10">O</option>
-            <option  value="9">A+</option>
-            <option  value="8">A</option>
-            <option  value="7">B+</option>
-            <option  value="6">B</option>
-            
-          </select></td>
-          <td><input type="number" id="cred2" name="cred2" min="1" max="4" style="margin-left:10.5%"></td>
-        </tr>
-        <tr>
-          <td>Subject3 : </td>
-          <td style="text-align: center;"><select name="mark3" id="mark3">
-            <option  value="10">O</option>
-            <option  value="9">A+</option>
-            <option  value="8">A</option>
-            <option  value="7">B+</option>
-            <option  value="6">B</option>
-            
-          </select></td>
-          <td><input type="number" id="cred3" name="cred3" min="1" max="4" style="margin-left:10.5%"></td>
-        </tr>
-        <tr>
-          <td>Subject4 : </td>
-          <td style="text-align: center;"><select name="mark4" id="mark4">
-            <option  value="10">O</option>
-            <option  value="9">A+</option>
-            <option  value="8">A</option>
-            <option  value="7">B+</option>
-            <option  value="6">B</option>
-            
-          </select></td>
-          <td><input type="number" id="cred4" name="cred4" min="1" max="4" style="margin-left:10.5%"></td>
-        </tr>
-        <tr>
-          <td>Subject5 : </td>
-          <td style="text-align: center;"><select name="mark5" id="mark5">
-            <option  value="10">O</option>
-            <option  value="9">A+</option>
-            <option  value="8">A</option>
-            <option  value="7">B+</option>
-            <option  value="6">B</option>
-            
-          </select></td>
-          <td><input type="number" id="cred5" name="cred5" min="1" max="4" style="margin-left:10.5%"></td>
-        </tr>
-        <tr>
-          <td>Subject6 : </td>
-          <td style="text-align: center;"><select name="mark6" id="mark6">
-            <option  value="10">O</option>
-            <option  value="9">A+</option>
-            <option  value="8">A</option>
-            <option  value="7">B+</option>
-            <option  value="6">B</option>
-            
-          </select></td>
-          <td><input type="number" id="cred6" name="cred6" min="1" max="4" style="margin-left:10.5%"></td>
-        </tr>
-        <tr>
-          <td><br></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="button" class="btn btn-lg btn-success" name="sumbutton" value="Calculate" onclick="gpm()" id="sumbutton" style="margin-left:36.5%"></td>
-          <td><input class="btn btn-lg btn-success" type="reset" value="Reset" style="margin-left:5.5%"/></td>
-          
-        </tr>
-        <tr>
-          <td><br></td>
-        </tr>
-       <tr>
-         <td>GPA :</td>
-         <td><input style="font-size: 20px;" type="text" class="text-danger"  placeholder="GPA" name="summ" id="summ" width="100px" readonly></td>
-       </tr>
-      </table>
-    </form>
+      <body style="background-color: rgb(243, 227, 230);">
+        <div class="container-fluid">
+          <br><br>
+          <h1 class="text-danger" style="text-align:center ">GPA calculator</h1> <br>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" >
+              <form name="gp">
+                <table style="margin-left: 80px;">
+                  <tr>
+                    <th style="text-align: center;">Subject</th>
+                    <th style="text-align: center;">Grade</th>
+                    <th style="text-align: center;">Credit</th>
+                  </tr>
+                  <tr>
+                    <td>Subject1 : </td>
+                    <td style="text-align: center;"><select name="mark1" id="mark1">
+                      <option  value="10">O</option>
+                      <option  value="9">A+</option>
+                      <option  value="8">A</option>
+                      <option  value="7">B+</option>
+                      <option  value="6">B</option>
+                      
+                    </select></td>
+                    <td><input type="number" id="cred1" name="cred1" min="1" max="4" style="margin-left:10.5%"></td>
+                  </tr>
+                  <tr>
+                    <td>Subject2 : </td>
+                    <td style="text-align: center;"><select name="mark2" max="4" id="mark2" >
+                      <option  value="10">O</option>
+                      <option  value="9">A+</option>
+                      <option  value="8">A</option>
+                      <option  value="7">B+</option>
+                      <option  value="6">B</option>
+                      
+                    </select></td>
+                    <td><input type="number" id="cred2" name="cred2" min="1" max="4" style="margin-left:10.5%"></td>
+                  </tr>
+                  <tr>
+                    <td>Subject3 : </td>
+                    <td style="text-align: center;"><select name="mark3" id="mark3">
+                      <option  value="10">O</option>
+                      <option  value="9">A+</option>
+                      <option  value="8">A</option>
+                      <option  value="7">B+</option>
+                      <option  value="6">B</option>
+                      
+                    </select></td>
+                    <td><input type="number" id="cred3" name="cred3" min="1" max="4" style="margin-left:10.5%"></td>
+                  </tr>
+                  <tr>
+                    <td>Subject4 : </td>
+                    <td style="text-align: center;"><select name="mark4" id="mark4">
+                      <option  value="10">O</option>
+                      <option  value="9">A+</option>
+                      <option  value="8">A</option>
+                      <option  value="7">B+</option>
+                      <option  value="6">B</option>
+                      
+                    </select></td>
+                    <td><input type="number" id="cred4" name="cred4" min="1" max="4" style="margin-left:10.5%"></td>
+                  </tr>
+                  <tr>
+                    <td>Subject5 : </td>
+                    <td style="text-align: center;"><select name="mark5" id="mark5">
+                      <option  value="10">O</option>
+                      <option  value="9">A+</option>
+                      <option  value="8">A</option>
+                      <option  value="7">B+</option>
+                      <option  value="6">B</option>
+                      
+                    </select></td>
+                    <td><input type="number" id="cred5" name="cred5" min="1" max="4" style="margin-left:10.5%"></td>
+                  </tr>
+                  <tr>
+                    <td>Subject6 : </td>
+                    <td style="text-align: center;"><select name="mark6" id="mark6">
+                      <option  value="10">O</option>
+                      <option  value="9">A+</option>
+                      <option  value="8">A</option>
+                      <option  value="7">B+</option>
+                      <option  value="6">B</option>
+                      
+                    </select></td>
+                    <td><input type="number" id="cred6" name="cred6" min="1" max="4" style="margin-left:10.5%"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><input type="button" class="btn btn-lg btn-success" name="sumbutton" value="Calculate" onclick="gpm()" id="sumbutton" style="margin-left:36.5%"></td>
+                    <td><input class="btn btn-lg btn-success" type="reset" value="Reset" style="margin-left:5.5%"/></td>
+                    
+                  </tr>
+                 
+                 <tr>
+                   <td>GPA :</td>
+                   <td><input style="font-size: 20px;" type="text"   placeholder="GPA" name="summ" id="summ" width="100px" readonly></td>
+                 </tr>
+                </table>
+              </form>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
 
-    
+
+  
   </center> 
+  <br><br>
   <div style="margin-top: 8px;" class="container-fluid">
     <h1 style="text-align: center;" class="text-danger">CGPA calculator</h1>
          
@@ -231,6 +243,7 @@
 </div>
   </div>
   <center>
+    <br>
   <footer>
     <div class="container-fluid" id="foot">
       <div class="row">
